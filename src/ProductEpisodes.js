@@ -33,7 +33,7 @@ class ProductEpisodes extends Component {
                 <article key={episode.id}>
                 
                     <figure className="col3">
-                        <img src={episode.image.medium} title={episode.name} />
+                        <img src={episode.image.medium} alt={episode.name} />
                     </figure>
 
                     <div className="content">
@@ -41,7 +41,7 @@ class ProductEpisodes extends Component {
                         
                         <Link
                             to={{
-                                pathname: `/episode/${episode.id}`,
+                                pathname:`/episode/${episode.id}`,
                                 state: {
                                 episodeImage: episode.image.original,
                                 episodeSummary: episode.summary,
@@ -50,6 +50,8 @@ class ProductEpisodes extends Component {
 
                                 },
                             }}
+                            title={`${episode.name}`}
+                            aria-label={`Click to more details of the episode ${episode.name}`}
                             >
                             Details
                         </Link>

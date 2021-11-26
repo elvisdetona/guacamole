@@ -19,19 +19,19 @@ class EpisodeDetail extends Component {
     const { episode } = this.state;
     const episodeImage = episode.image ? episode.image : this.props.location.state.episodeImage;
     const episodeSummary = episode.summary ? episode.summary : this.props.location.state.episodeSummary;
+    const mainSummary = this.props.location.state.mainSummary;
 
     return (
     <>
-
-        <section className="main wrapper">
-            <h1>{this.props.location.state.mainName}</h1>
-            <div dangerouslySetInnerHTML={ {__html: this.props.location.state.mainSummary} } />
-        </section>
+      <section className="main wrapper">
+        <h1>{this.props.location.state.mainName}</h1>
+        <div dangerouslySetInnerHTML={ {__html: mainSummary } } />
+      </section>
 
         <section className="wrapper">
             <article className="detail">
                 <figure className="coldetail">
-                    <img src={episodeImage} title={episode.name} />
+                    <img src={episodeImage} alt={episode.name} />
                 </figure>
 
                 <div className="content">
