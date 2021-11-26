@@ -6,8 +6,7 @@ import EpisodeDetail from "./EpisodeDetail";
 
 function App() {
   return (
-    <div>
-
+    <>
       <nav className="navigation">
         <Link to="/">Home</Link>
       </nav>
@@ -23,7 +22,7 @@ function App() {
           <EpisodeDetail />
         </Route>
       </Switch>
-    </div>
+    </>
   );
 }
 

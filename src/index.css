@@ -11,6 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #f7f7f7;
   padding: 40px 0;
+  /* background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1000% 1000%;
+  animation: rainbow 10s ease infinite; */
 }
 
 code {
@@ -18,7 +21,8 @@ code {
     monospace;
 }
 
-.main, .home {
+.main, 
+.home {
   display: grid;
   grid-column-gap: 40px;
   grid-row-gap: 60px;
@@ -165,3 +169,9 @@ article .content {
 .navigation a:hover {
   box-shadow: 2px 2px 10px 0 rgb(69 69 69 / 30%);
 }
+
+/* @keyframes rainbow { 
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+} */

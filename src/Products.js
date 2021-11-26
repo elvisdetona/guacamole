@@ -26,7 +26,7 @@ class Products extends Component {
               <article key={filme.show.id}>
                 
                 <figure>
-                  <img src={filme.show.image.medium} />
+                  <img src={filme.show.image.medium} alt={filme.show.name} />
                 </figure>
 
                 <div className="content">
@@ -42,8 +42,10 @@ class Products extends Component {
 
                       },
                     }}
+                    title={`${filme.show.name}`}
+                    aria-label={`Click to view the list of ${filme.show.name} episodes`}
                   >
-                    Details
+                    Items
                   </Link>
                 </div>
 
